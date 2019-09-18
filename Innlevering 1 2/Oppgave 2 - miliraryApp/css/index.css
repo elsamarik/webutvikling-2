@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+@import url(https://fonts.googleapis.com/css?family=Anton);
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background-image: url(https://i.pinimg.com/originals/ce/2f/9a/ce2f9a109599a284b214db7984194409.jpg);
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+    line-height:1.25;
+}
+
+img.preview {
+    width:200px;
+    height:auto;
+    clear:both;
+    margin:10px 0;
+  }
+
+image{
+  width:200px;
+    height:auto;
+    clear:both;
+    margin:10px 0; 
+}
+
+  article{
+    width:320px;
+    padding:2rem;
+    background-color: #919563;
+    border: 1px;
+    border-radius:.375rem;
+    -webkit-box-shadow: 11px 13px 33px 13px rgba(0,0,0,0.77);
+    -moz-box-shadow: 11px 13px 33px 13px rgba(0,0,0,0.77);
+    box-shadow: 11px 13px 33px 13px rgba(0,0,0,0.77);
+  }
+
+  h1{
+    font-family: 'Anton', sans-serif;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+      font-size: 28px;
+}
+
+  #activityDescription{
+      height: 10px;
+  }
+  
+  #app {
+    text-align: center;
+  }
+  img {
+    width: 200px;
+    margin: auto;
+    display: block;
+    margin-bottom: 10px;
+  }

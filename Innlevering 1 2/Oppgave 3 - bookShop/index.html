@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>Butikk om bøker</title>
+
+</head>
+
+
+<body>
+    <header id="main-page-header">
+        <h1 id="header">Butikk om bøker</h1>
+    </header>
+
+<!--Selve inneholdet på siden, her får man se hva en bok inneholder, koster osv.-->
+    <main id="main-page-container">
+        <section id="product-section">
+            <products v-for="(product, index) in productData" :key="index" v-bind:product-image="product.productImage"
+                v-bind:product-name="product.productName" v-bind:description="product.description"
+                v-bind:inventory="product.inventory" v-bind:price="product.price">
+            </products>
+
+        </section>
+
+<!--Her ser man hva handlekurven inneholder-->
+        <section id="shoppingCart-section">
+            <div id="shoppingCart-header">
+                <h2 id="shoppingCart-title">Handlekurven din </h2>
+                <h2 id="shoppingCart-icon">{{itemCounter}} <i class="fas fa-shopping-cart"></i></h2>
+                <h3 id="shoppingCart-total">Totalt: {{total}} kr</h3>
+                <button id="buy-button" @click="checkout()">{{message}}</button>
+            </div>
+
+            <items v-for="(item, index) in shoppingCartList" :key="index" v-bind:product-image="item.productImage"
+                v-bind:product-name="item.productName"
+                v-bind:inventory="item.inventory" v-bind:price="item.price"
+                v-on:remove="shoppingCartList.splice(index, 1)">
+            </items>
+
+        </section>
+    </main>
+
+</body>
+
+<!--SCRIPTS-->
+<script src="scripts/jquery-3.3.1.min.js"></script>
+<script src="scripts/vue.min.js"></script>
+<script src="scripts/index.js"></script>

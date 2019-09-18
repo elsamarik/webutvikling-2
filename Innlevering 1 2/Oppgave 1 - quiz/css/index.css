@@ -1,0 +1,43 @@
+
+
+body {
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+    color: #333;
+}
+
+.question {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.answers {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+#submit {
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: rgb(11, 114, 87);
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+}
+
+#submit:hover {
+    background-color: #3a8;
+}
+
+article {
+    position: absolute;
+    text-align: center;
+    background: #DDA0DD;
+    width: 500px;
+    border-radius: 10px;
+
+}

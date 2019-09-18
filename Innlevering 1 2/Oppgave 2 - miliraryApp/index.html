@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+
+
+
+</head>
+
+<body>
+
+<!--artikkel-boksen der man fyller inn ordre til soldatene-->
+  <article box="ORDER">
+    <h1>OPPRETT ORDRE TIL SOLDATENE</h1><br>
+    <label>Legg til tittel: </label>
+    <input type="text"> <br>
+    <label>Legg til beskrivelse: </label>
+    <textarea id="activityDescription" name="Field2" spellcheck="true" rows="10" col="50" tabindex="2" value="default">
+</textarea><br>
+
+    <label>Legg til dato: </label>
+    <input type="date" placeholder="...dato" id="datepicker"><br>
+
+    <!--Henting av bilder-->
+    <div id="app">
+      <div v-if="!image">
+        <label>Velg bilde:</label>
+        <input type="file" @change="onFileChange">
+      </div>
+      <div v-else>
+        <img :src="image" />
+        <button @click="removeImage">Fjern bilde<button>
+      </div>
+    </div>
+    <br>
+
+    <input type="submit" value="Send order" class="submit-button" href="#" onclick="greet()">
+
+
+
+  </article>
+
+<!--SCRIPTS-->
+  <script src="scripts/jquery-3.3.1.min.js"></script>
+  <script src="scripts/vue-development-mode.js"></script>
+  <script src="scripts/qunit.js"></script>
+  <script src="scripts/tests.js"></script>
+  <script src="scripts/index.js"></script>
+
+</body>
